@@ -1,1 +1,1 @@
-# Dot-Net-core-apps-to-k8s-Bamboo
+# DotNet-core-app-to-Kubernetes
