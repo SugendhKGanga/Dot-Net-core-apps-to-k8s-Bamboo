@@ -3,9 +3,9 @@
 # Pushing the Helm chart
 # Note - this uses the Artifactory API. You can replace it with any other solution you use.
 
-HELM_USR=""
-HELM_PSW=""
-HELM_REPO=""
+HELM_USR="admin"
+HELM_PSW="AP5hcKwvDY7Amewp"
+HELM_REPO="http://23.101.135.43/artifactory/helm-local/"
 
     echo -e "\nPushing Helm chart"
 
@@ -14,4 +14,3 @@ HELM_REPO=""
 
     [ ! -z "${chart_name}" ] || errorExit "Did not find the helm chart to deploy"
     curl -u${HELM_USR}:${HELM_PSW} -T ${chart_name} "${HELM_REPO}/$(basename ${chart_name})" || errorExit "Uploading helm chart failed"
-    echo
