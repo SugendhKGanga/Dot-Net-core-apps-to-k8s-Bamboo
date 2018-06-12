@@ -3,16 +3,11 @@ items:
 - apiVersion: v1
   kind: Service
   metadata:
-    creationTimestamp: 2018-06-11T09:23:40Z
     labels:
       run: hello-dotnet
     name: hello-dotnet
-    namespace: test
     resourceVersion: "8424"
-    selfLink: /api/v1/namespaces/test/services/hello-dotnet
-    uid: 20a192f0-6d59-11e8-897b-6665d995e746
   spec:
-    clusterIP: 10.0.207.220
     externalTrafficPolicy: Cluster
     ports:
     - nodePort: 30553
@@ -26,7 +21,6 @@ items:
   status:
     loadBalancer:
       ingress:
-      - ip: 40.114.71.148
 kind: List
 metadata:
   resourceVersion: ""
