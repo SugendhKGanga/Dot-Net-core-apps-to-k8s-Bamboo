@@ -1,5 +1,7 @@
 #!/bin/bash
 
+HELM_REPO=$bamboo_HELM_REPO
+
 #create env if not present
 /usr/local/bin/kubectl create ns production
 
@@ -8,8 +10,8 @@
 #kubectl expose deployment hello-dotnet --type=LoadBalancer --port=8080 -n production
 
 #rm -rf helm
-#helm repo add helm http://35.224.229.155/artifactory/helm-local
-#helm repo update
+/usr/local/bin/helm repo add helm $HELM_REPO
+/usr/local/bin/helm repo update
 
 #helm install
 /usr/local/bin/helm install --namespace production --name dotnetcorebmb-latest-prod --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
