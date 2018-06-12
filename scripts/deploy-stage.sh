@@ -10,4 +10,9 @@
 #rm -rf helm
 #/usr/local/bin/helm repo add helm http://35.224.229.155/artifactory/helm-local
 #/usr/local/bin/helm repo update
-/usr/local/bin/helm upgrade --install --namespace staging dotnetcorebmb-latest-stage --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
+
+#helm install
+/usr/local/bin/helm install --namespace staging --name dotnetcorebmb-latest-stage --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
+
+#helm upgrade
+#/usr/local/bin/helm upgrade --install --namespace staging dotnetcorebmb-latest-stage --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
