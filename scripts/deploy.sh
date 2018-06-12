@@ -10,7 +10,7 @@ HELM_REPO=$bamboo_HELM_REPO
 #kubectl expose deployment hello-dotnet --type=LoadBalancer --port=8080 -n test
 
 rm -rf helm
-/usr/local/bin/helm repo add helm $HELM_REPO/helm-local
+/usr/local/bin/helm repo add helm $HELM_REPO
 /usr/local/bin/helm repo update
 
 #helm install
