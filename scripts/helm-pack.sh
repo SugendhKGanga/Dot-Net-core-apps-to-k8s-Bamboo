@@ -6,5 +6,5 @@
     [ -d pkg/helm ] && rm -rf pkg/helm
     mkdir -p pkg/helm
 
-    helm package -d pkg/helm helm/devops || errorExit "Packing helm chart helm/devops failed"
+    /usr/local/bin/helm package -d pkg/helm helm/devops || errorExit "Packing helm chart helm/devops failed"
 
