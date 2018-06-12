@@ -5,7 +5,7 @@
 
 HELM_USR=$bamboo_HELM_USR
 HELM_PSW=$bamboo_HELM_PSW
-#HELM_REPO="http://23.101.135.43/artifactory/helm-local/"
+HELM_REPO=$bamboo_HELM_REPO
 
     echo -e "\nPushing Helm chart"
 
@@ -13,4 +13,4 @@ HELM_PSW=$bamboo_HELM_PSW
     echo "Helm chart: ${chart_name}"
 
     [ ! -z "${chart_name}" ] || errorExit "Did not find the helm chart to deploy"
-    curl -u$HELM_USR:$HELM_PSW -T ${chart_name} "${bamboo.HELM_REPO}/$(basename ${chart_name})" || errorExit "Uploading helm chart failed"
+    curl -u$HELM_USR:$HELM_PSW -T ${chart_name} "$HELM_REPO/$(basename ${chart_name})" || errorExit "Uploading helm chart failed"
