@@ -10,4 +10,4 @@
 rm -rf helm
 helm repo add helm http://35.224.229.155/artifactory/helm-local
 helm repo update
-helm upgrade --install --namespace test dotnetcorebmb-latest-master --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
+helm upgrade --install --namespace test dotnetcorebmb-latest-test --set image.repository=sugendh/dotnetcorebmb,image.tag=latest helm/devops
