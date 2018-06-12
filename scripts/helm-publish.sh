@@ -9,7 +9,7 @@
 
     echo -e "\nPushing Helm chart"
 
-    local chart_name=$(ls -1 pkg/helm/*.tgz 2> /dev/null)
+    chart_name=$(ls -1 pkg/helm/*.tgz 2> /dev/null)
     echo "Helm chart: ${chart_name}"
 
     [ ! -z "${chart_name}" ] || errorExit "Did not find the helm chart to deploy"
